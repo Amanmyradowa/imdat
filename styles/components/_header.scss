@@ -1,0 +1,60 @@
+.blur{
+  backdrop-filter: blur(10px);
+}
+.header_con{
+  position: fixed;
+  left: 0;
+  right: 0;
+  .header{
+    width: 100%;
+    color: $white;
+    padding: 20px 0;
+    background: transparent;
+    @include flex();
+    #logo{
+      cursor: pointer;
+    }
+    .navbar{
+      ul{
+        @include flex(flex-start);
+        li{
+          @include flex(flex-start);
+          color: $white;
+          &:first-child{
+            margin-right: 60px;
+            cursor: pointer;
+            span{
+              display: flex;
+              margin-left: 5px;
+            }
+          }
+          a{
+            color: $white;
+            text-decoration: none;
+            margin-right: 60px;
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .basket{
+      @include flex(flex-start);
+      position: relative;
+      .bag{
+        display: flex;
+      }
+      .red_circle{
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        background-color: rgba(247, 148, 137, 1);
+        border-radius: 50%;
+        position: absolute;
+        top: 1px;
+        right: -3px;
+      }
+    }
+  }
+}

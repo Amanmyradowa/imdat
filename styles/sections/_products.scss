@@ -1,0 +1,48 @@
+#products {
+  margin-bottom: 165px;
+
+  .title {
+    text-align: center;
+    margin-bottom: 40px
+  }
+
+  .product_carts {
+    @include flex();
+
+    .product_cart {
+      width: 24.5%;
+      @include flex(flex-start, stretch, column);
+      text-decoration: none;
+
+      .product {
+        padding: 50px 85px;
+        background: #F6F6F6;
+        margin-bottom: 20px;
+      }
+
+      .product_category {
+        font-size: 14px;
+        color: #C4C4C4;
+        margin: 10px 0;
+      }
+
+      .stars {
+        @include flex(flex-start);
+
+        span {
+          display: flex;
+          margin-right: 5px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .product_id {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

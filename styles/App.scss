@@ -1,0 +1,14 @@
+// config
+@import"./config/variabless";
+@import"./config/fonts";
+@import"./config/mixins";
+
+// components
+@import"./components/header";
+@import"./components/footer";
+
+// sections
+@import"./sections/sectionOne";
+@import"./sections/features";
+@import"./sections/ideas";
+@import"./sections/products";

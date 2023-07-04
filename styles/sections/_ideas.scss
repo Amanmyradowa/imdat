@@ -1,0 +1,50 @@
+#ideas {
+  @include flex();
+  flex-wrap: wrap;
+  margin-bottom: 220px;
+
+  .ideas_left {
+    width: 48%;
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .ideas_types {
+      @include flex(space-between, stretch, column);
+
+      .ideas_type {
+        .ideas_name_icon {
+          @include flex();
+          margin: 20px 0;
+
+          .ideas_name {}
+
+          span {
+            display: flex;
+            cursor: pointer;
+          }
+        }
+
+        .ideas_text {
+          height: 0;
+          overflow: hidden;
+
+          &.show {
+            height: 135px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .ideas_right {
+    width: 48%;
+
+    .ideas {
+      width: 100%;
+      border-radius: 60px 60px 0px 60px;
+    }
+  }
+}
