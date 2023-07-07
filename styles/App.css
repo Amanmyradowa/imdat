@@ -133,6 +133,12 @@ li {
   color: white;
   cursor: pointer;
 }
+.header_con .header .navbar ul li:first-child button span svg {
+  transition: 0.4s;
+}
+.header_con .header .navbar ul li:first-child button span.active svg {
+  transform: rotate(-180deg);
+}
 .header_con .header .navbar ul li:first-child .dropdown_content {
   width: 100%;
   position: absolute;
@@ -240,6 +246,12 @@ li {
   background: none;
   border: none;
   outline: none;
+}
+.header_con .header .mobile_right .mobile_menu ul li:first-child button span svg {
+  transition: 0.4s;
+}
+.header_con .header .mobile_right .mobile_menu ul li:first-child button span.active svg {
+  transform: rotate(-180deg);
 }
 .header_con .header .mobile_right .mobile_menu ul li:first-child .dropdown_content_menu {
   height: 0;

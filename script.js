@@ -111,10 +111,13 @@ document.addEventListener('DOMContentLoaded', function () {
 //for Open and Close navbar dropdown
 function dropdown() {
   const drop = document.querySelector('.dropdown_content');
+  const arrow = document.querySelector('.arrow');
   if (drop.style.height === '125px') {
     drop.style.height = '0';
+    arrow.classList.remove('active');
   } else {
     drop.style.height = '125px';
+    arrow.classList.add('active');
   }
 }
 // for Close navbar dropdown and mobile menu button and contact input unfocus when click anywhere
@@ -125,9 +128,13 @@ document.addEventListener('click', function (e) {
   const menuUl = document.querySelector('.mobile_menu ul')
   const hamburger = document.querySelector('#hamburger')
   const input = document.querySelector('.input');
+  const arrow = document.querySelector('.arrow');
+  const arrowMob = document.querySelector('.arrowMob');
 
   if (!drop.contains(e.target) && !dropButton.contains(e.target)) {
     drop.style.height = 0;
+    arrow.classList.remove('active');
+
   }
   if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
     menuUl.style.scale = '0'
@@ -139,7 +146,6 @@ document.addEventListener('click', function (e) {
       input.style.width = '60%'
     }
   }
-
 })
 
 //for menu
@@ -154,11 +160,14 @@ function menu() {
 
 //for mobile dropdown
 function dropdownMobile() {
-  const drop = document.querySelector('.dropdown_content_menu')
+  const drop = document.querySelector('.dropdown_content_menu');
+  const arrowMob = document.querySelector('.arrowMob');
   if (drop.style.height === '70px') {
     drop.style.height = '0'
+    arrowMob.classList.remove('active');
   } else {
     drop.style.height = '70px'
+    arrowMob.classList.add('active');
   }
 }
 

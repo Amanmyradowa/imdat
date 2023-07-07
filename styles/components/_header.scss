@@ -56,6 +56,18 @@
               outline: none;
               color: white;
               cursor: pointer;
+
+              span {
+                svg {
+                  transition: .4s;
+                }
+
+                &.active {
+                  svg {
+                    transform: rotate(-180deg);
+                  }
+                }
+              }
             }
 
             .dropdown_content {
@@ -171,6 +183,18 @@
                 background: none;
                 border: none;
                 outline: none;
+
+                span {
+                  svg {
+                    transition: .4s;
+                  }
+
+                  &.active {
+                    svg {
+                      transform: rotate(-180deg);
+                    }
+                  }
+                }
               }
 
               .dropdown_content_menu {
