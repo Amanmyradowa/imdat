@@ -3,28 +3,43 @@
   flex-wrap: wrap;
   margin-bottom: 220px;
 
-  @include laptop{
+  @include laptop {
     margin-bottom: 120px;
   }
 
-  .mobile_left{
+  .mobile_left {
     display: none;
-    @include tablet{
+    position: relative;
+
+    @include tablet {
       width: 90%;
       display: flex;
       margin: 0 auto 100px;
-  
+
       .ideas {
         width: 100%;
         border-radius: 60px 60px 0px 60px;
+        display: flex;
       }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(51, 51, 51, 0.3);
+      width: 100%;
+      height: 100%;
+      border-radius: 60px 60px 0px 60px;
     }
   }
 
   .ideas_left {
     width: 48%;
 
-    @include tablet{
+    @include tablet {
       width: 90%;
       margin: 0 auto;
     }
@@ -48,6 +63,10 @@
           span {
             display: flex;
             cursor: pointer;
+
+            svg:last-child {
+              display: none;
+            }
           }
         }
 
@@ -55,6 +74,7 @@
           height: 0;
           overflow: hidden;
           line-height: 200%;
+          transition: .3s;
 
           &.show {
             height: 135px;
@@ -68,7 +88,7 @@
   .ideas_right {
     width: 48%;
 
-    @include tablet{
+    @include tablet {
       width: 90%;
       margin: 0 auto;
       display: none;
@@ -77,6 +97,23 @@
     .ideas {
       width: 100%;
       border-radius: 60px 60px 0px 60px;
+      display: flex;
+    }
+
+    .ideas_img_con {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(51, 51, 51, 0.3);
+        width: 100%;
+        height: 100%;
+        border-radius: 60px 60px 0px 60px;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@ const dataAbout = [
   {
     commentTitle: "Best planning service",
     commentText:
-    "I had fantastic experience at shady rhymes with pax planner, shady rhymes was so helpful and friendly and went above and beyond to help me configure my perfect walk in wardobe room.",
+      "I had fantastic experience at shady rhymes with pax planner, shady rhymes was so helpful and friendly and went above and beyond to help me configure my perfect walk in wardobe room.",
     commentImg: `<img src="./images/profile.svg" alt="profile image" class="profile">`,
     commentAuthor: "John Doe",
     authorJob: 'Project manager of cupalo'

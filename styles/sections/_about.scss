@@ -3,12 +3,12 @@
   padding: 85px 0 230px;
   margin-bottom: 200px;
 
-  @include laptop{
+  @include laptop {
     padding-bottom: 120px;
     margin-bottom: 145px;
   }
 
-  @include tablet{
+  @include tablet {
     padding: 40px 0 80px;
     margin-bottom: 100px;
   }
@@ -17,8 +17,8 @@
     text-align: center;
     margin-bottom: 110px;
 
-    
-    @include tablet{
+
+    @include tablet {
       width: 90%;
       margin: 0 auto 40px;
     }
@@ -28,8 +28,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 70px;
-    
-    @include tablet{
+
+    @include tablet {
       width: 90%;
       margin: 0 auto;
       grid-template-columns: 1fr;
@@ -37,14 +37,15 @@
 
     .comment {
 
-      @include tablet{
+      @include tablet {
         width: 100%;
       }
 
       .comment_title {
         font-size: 24px;
         font-weight: 600;
-        @include mobile{
+
+        @include mobile {
           font-size: 14px;
         }
       }

@@ -7,6 +7,7 @@
   <title>shady rhymes</title>
   <link rel="stylesheet" href="./styles/App.css">
   <link rel="shortcut icon" href="./logo/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./src/splide.min.css">
 </head>
 
 <body>
@@ -19,13 +20,26 @@
         </a>
         <nav class="navbar">
           <ul>
-            <li>
-              Furniture
-              <span>
-                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 1L4.5 4L8 1" stroke="white" />
-                </svg>
-              </span>
+            <li class="dropdown">
+              <button onclick="dropdown()">
+                Furniture
+                <span>
+                  <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4.5 4L8 1" stroke="white" />
+                  </svg>
+                </span>
+              </button>
+              <div class="dropdown_content">
+                <div class="dropdown_content_li">
+                  Furniture 1
+                </div>
+                <div class="dropdown_content_li">
+                  Furniture 1
+                </div>
+                <div class="dropdown_content_li">
+                  Furniture 1
+                </div>
+              </div>
             </li>
             <li>
               <a href="#">Shop</a>
@@ -47,13 +61,47 @@
             </span>
             <span class="red_circle"></span>
           </div>
-          <span id="hamburger">
+          <button id="hamburger" onclick="menu()">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 6H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M2 18H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-          </span>
+          </button>
+          <div class="mobile_menu">
+            <ul>
+              <li class="dropdown">
+                <button onclick="dropdownMobile()">
+                  Furniture
+                  <span>
+                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L4.5 4L8 1" stroke="black" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="dropdown_content_menu">
+                  <div class="dropdown_content_li">
+                    Furniture 1
+                  </div>
+                  <div class="dropdown_content_li">
+                    Furniture 1
+                  </div>
+                  <div class="dropdown_content_li">
+                    Furniture 1
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Shop</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
     </div>
@@ -62,6 +110,27 @@
 
   <!-- sectionOne start -->
   <section id="section_one">
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="back_image_con">
+              <img class="back_image" src="./images/back.svg" alt="">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="back_image_con">
+              <img class="back_image" src="./images/interior2.jpg" alt="">
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="back_image_con">
+              <img class="back_image" src="./images/interior3.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="container">
       <h1 class="section_one_title">Make Your Interior More Minimaistic & Modern</h1>
       <div class="text">Bringing interiors to life, understanding the person or people living in a home is far greater
@@ -105,13 +174,17 @@
         <div class="ideas_type">
           <div class="ideas_name_icon">
             <h3 class="ideas_name">Modern</h3>
-            <span class="plus">
+            <span class="plus" onclick="openIdea(0)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 8L16 8" stroke="#F79489" />
+                <path d="M8 16L8 -5.96046e-07" stroke="#F79489" />
+              </svg>
               <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 1L16 1" stroke="#F79489" />
               </svg>
             </span>
           </div>
-          <p class="ideas_text show">
+          <p class="ideas_text">
             Modern design is a term in the design world that refers to a house with a clean design, simple color
             choices, the use of materials including metal, glass, and steel, and is usually accompanied by clean lines.
           </p>
@@ -120,10 +193,13 @@
         <div class="ideas_type">
           <div class="ideas_name_icon">
             <h3 class="ideas_name">Contemporary</h3>
-            <span>
+            <span onclick="openIdea(1)">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 8L16 8" stroke="#F79489" />
                 <path d="M8 16L8 -5.96046e-07" stroke="#F79489" />
+              </svg>
+              <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1L16 1" stroke="#F79489" />
               </svg>
             </span>
           </div>
@@ -136,10 +212,13 @@
         <div class="ideas_type">
           <div class="ideas_name_icon">
             <h3 class="ideas_name">Minimalis</h3>
-            <span>
+            <span onclick="openIdea(2)">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 8L16 8" stroke="#F79489" />
                 <path d="M8 16L8 -5.96046e-07" stroke="#F79489" />
+              </svg>
+              <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1L16 1" stroke="#F79489" />
               </svg>
             </span>
           </div>
@@ -152,10 +231,13 @@
         <div class="ideas_type">
           <div class="ideas_name_icon">
             <h3 class="ideas_name">Industrial</h3>
-            <span>
+            <span onclick="openIdea(3)">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 8L16 8" stroke="#F79489" />
                 <path d="M8 16L8 -5.96046e-07" stroke="#F79489" />
+              </svg>
+              <svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1L16 1" stroke="#F79489" />
               </svg>
             </span>
           </div>
@@ -168,7 +250,9 @@
       </div>
     </div>
     <div class="ideas_right">
-      <img class="ideas" src="./images/ideas.svg" alt="">
+      <div class="ideas_img_con">
+        <img class="ideas" src="./images/ideas.svg" alt="">
+      </div>
     </div>
     <a class="more_info" href="#">See more category</a>
   </section>
@@ -212,7 +296,8 @@
         </p>
       </div>
       <div class="input">
-        <input type="email" id="email" placeholder="Insert your email address">
+        <input type="email" autocomplete="off" onfocus="contactInput()" id="email"
+          placeholder="Insert your email address">
         <button type="submit">
           <label for="email">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -270,6 +355,10 @@
   <script src="./dataProducts.js"></script>
   <script src="./dataAbout.js"></script>
   <script src="./script.js"></script>
+  <script src="./src/splide.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>

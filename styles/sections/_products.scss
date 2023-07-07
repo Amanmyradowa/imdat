@@ -1,7 +1,7 @@
 #products {
   margin-bottom: 165px;
-  
-  @include tablet{
+
+  @include tablet {
     width: 90%;
     margin-bottom: 100px;
   }
@@ -10,7 +10,7 @@
     text-align: center;
     margin-bottom: 40px;
 
-    @include mobile{
+    @include mobile {
       margin-bottom: 20px
     }
   }
@@ -20,13 +20,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
 
-    @include tablet{
+    @include tablet {
       grid-template-columns: 1fr 1fr;
     }
-    
+
     .product_cart {
       text-decoration: none;
-      @include tablet{
+
+      @include tablet {
         margin-bottom: 40px;
       }
 
@@ -37,7 +38,7 @@
         background: #F6F6F6;
         margin-bottom: 20px;
 
-        @include mobile{
+        @include mobile {
           padding: 0 15px;
         }
       }
