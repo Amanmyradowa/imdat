@@ -3,11 +3,38 @@
   flex-wrap: wrap;
   margin-bottom: 220px;
 
+  @include laptop{
+    margin-bottom: 120px;
+  }
+
+  .mobile_left{
+    display: none;
+    @include tablet{
+      width: 90%;
+      display: flex;
+      margin: 0 auto 100px;
+  
+      .ideas {
+        width: 100%;
+        border-radius: 60px 60px 0px 60px;
+      }
+    }
+  }
+
   .ideas_left {
     width: 48%;
 
+    @include tablet{
+      width: 90%;
+      margin: 0 auto;
+    }
+
     .title {
       margin-bottom: 20px;
+    }
+
+    .text {
+      line-height: 200%
     }
 
     .ideas_types {
@@ -18,8 +45,6 @@
           @include flex();
           margin: 20px 0;
 
-          .ideas_name {}
-
           span {
             display: flex;
             cursor: pointer;
@@ -29,6 +54,7 @@
         .ideas_text {
           height: 0;
           overflow: hidden;
+          line-height: 200%;
 
           &.show {
             height: 135px;
@@ -41,6 +67,12 @@
 
   .ideas_right {
     width: 48%;
+
+    @include tablet{
+      width: 90%;
+      margin: 0 auto;
+      display: none;
+    }
 
     .ideas {
       width: 100%;

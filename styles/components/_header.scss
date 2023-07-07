@@ -1,59 +1,104 @@
-.blur{
-  backdrop-filter: blur(10px);
+.blur {
+  background: rgb(197, 165, 162);
+  opacity: .9;
+
+  a {
+    &:hover {
+      color: #564E4E !important;
+    }
+  }
 }
-.header_con{
+
+.header_con {
   position: fixed;
   left: 0;
   right: 0;
-  .header{
+
+  .header {
     width: 100%;
     color: $white;
     padding: 20px 0;
-    background: transparent;
     @include flex();
-    #logo{
+
+    @include tablet {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    #logo {
       cursor: pointer;
     }
-    .navbar{
-      ul{
+
+    .navbar {
+      ul {
         @include flex(flex-start);
-        li{
+
+        @include tablet {
+          display: none;
+        }
+
+        li {
           @include flex(flex-start);
           color: $white;
-          &:first-child{
+
+          &:first-child {
             margin-right: 60px;
             cursor: pointer;
-            span{
+
+            span {
               display: flex;
               margin-left: 5px;
             }
           }
-          a{
+
+          a {
             color: $white;
             text-decoration: none;
             margin-right: 60px;
-            &:last-child{
+            transition: ease-in-out .3s;
+
+            &:hover {
+              color: rgb(247, 148, 137);
+            }
+
+            &:last-child {
               margin-right: 0;
             }
           }
         }
       }
     }
-    .basket{
-      @include flex(flex-start);
-      position: relative;
-      .bag{
-        display: flex;
+
+    .mobile_right {
+      display: flex;
+
+      .basket {
+        @include flex(flex-start);
+        position: relative;
+
+        .bag {
+          display: flex;
+        }
+
+        .red_circle {
+          width: 8px;
+          height: 8px;
+          display: inline-block;
+          background-color: rgba(247, 148, 137, 1);
+          border-radius: 50%;
+          position: absolute;
+          top: 1px;
+          right: -3px;
+        }
       }
-      .red_circle{
-        width: 8px;
-        height: 8px;
-        display: inline-block;
-        background-color: rgba(247, 148, 137, 1);
-        border-radius: 50%;
-        position: absolute;
-        top: 1px;
-        right: -3px;
+
+      #hamburger {
+        display: none;
+        margin-left: 10px;
+
+        @include tablet {
+          display: flex;
+        }
       }
     }
   }
