@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //for Open and Close navbar dropdown
 function dropdown() {
   const drop = document.querySelector('.dropdown_content');
-  console.log(drop.style.height)
   if (drop.style.height === '125px') {
     drop.style.height = '0';
   } else {
@@ -177,13 +176,18 @@ function openIdea(index) {
   const ideas = document.querySelectorAll('.ideas_text');
   const ideasIcon = document.querySelectorAll('.ideas_name_icon span');
 
-  for (let i = 0; i < ideas.length; i++) {
-    ideas[i].classList.remove('show');
-    ideasIcon[i].querySelectorAll('svg')[0].style.display = 'block';
-    ideasIcon[i].querySelectorAll('svg')[1].style.display = 'none';
+  if (ideasIcon[index].querySelectorAll('svg')[1].style.display === 'none' || ideasIcon[index].querySelectorAll('svg')[1].style.display === '') {
+    for (let i = 0; i < ideas.length; i++) {
+      ideas[i].classList.remove('show');
+      ideasIcon[i].querySelectorAll('svg')[0].style.display = 'block';
+      ideasIcon[i].querySelectorAll('svg')[1].style.display = 'none';
+    }
+    ideas[index].classList.add('show');
+    ideasIcon[index].querySelectorAll('svg')[1].style.display = 'block';
+    ideasIcon[index].querySelectorAll('svg')[0].style.display = 'none';
+  } else {
+    ideas[index].classList.remove('show');
+    ideasIcon[index].querySelectorAll('svg')[0].style.display = 'block';
+    ideasIcon[index].querySelectorAll('svg')[1].style.display = 'none';
   }
-  ideas[index].classList.add('show');
-  ideasIcon[index].querySelectorAll('svg')[1].style.display = 'block'
-  ideasIcon[index].querySelectorAll('svg')[0].style.display = 'none'
-  console.log(index);
 }

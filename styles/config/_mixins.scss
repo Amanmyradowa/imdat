@@ -50,35 +50,37 @@
     flex-direction: $direction;
 }
 
-button{
+button {
     outline: none;
     border: none;
     background: none;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(247, 148, 137); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(197, 165, 162);
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(247, 148, 137) 
-  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(247, 148, 137)
+}

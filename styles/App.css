@@ -58,7 +58,7 @@ li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(247, 148, 137);
+  background: rgb(197, 165, 162);
   border-radius: 10px;
 }
 
@@ -686,6 +686,7 @@ footer .footer_bottom {
 #ideas .ideas_left .ideas_types .ideas_type .ideas_name_icon span {
   display: flex;
   cursor: pointer;
+  padding: 5px;
 }
 #ideas .ideas_left .ideas_types .ideas_type .ideas_name_icon span svg:last-child {
   display: none;
